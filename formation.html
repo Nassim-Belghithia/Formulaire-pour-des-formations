@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription aux Formations</title>
+    <link rel="stylesheet" href="formation.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Inscription aux Formations</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" placeholder="Entrer votre Nom"><br><br>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" placeholder="Entrer votre Prénom"><br><br>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse"placeholder="Entrer votre Adresse"><br><br>
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="text" id="telephone" placeholder="Entrer votre numéro de téléphone"><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="Entrer votre Adresse Email"><br><br>
+                <label for="niveau">Niveau :</label>
+                <select id="niveau" required>
+                    <option value="Débutant">Débutant</option>
+                    <option value="Intermédiaire">Intermédiaire</option>
+                    <option value="Avancé">Avancé</option>
+                </select>
+            </div><br><br>
+            <fieldset>
+            <legend><h3>Choisissez vos formations :</h3></legend>
+            <div class="checkbox-group">
+                <label for="devops">DevOps - 30 jours - 600 DT</label>
+                <input type="checkbox" id="devops" value="DevOps" data-duration="30" data-price="600" ><br><br><br>
+                <label for="web1">Développement Web N1 - 20 jours - 400 DT</label>
+                <input type="checkbox" id="web1" value="Développement Web N1" data-duration="20" data-price="400"><br><br><br>
+                <label for="web2">Développement Web N2 - 25 jours - 500 DT</label>
+                <input type="checkbox" id="web2" value="Développement Web N2" data-duration="25" data-price="500"><br><br><br>
+                <label for="deep">Deep Learning - 35 jours - 700 DT</label>
+                <input type="checkbox" id="deep" value="Deep Learning" data-duration="35" data-price="700"><br><br><br>
+                <label for="python">Python - 15 jours - 300 DT</label>
+                <input type="checkbox" id="python" value="Python" data-duration="15" data-price="300"><br><br><br>
+                
+            </div>
+            <div class="form-group">
+                <label for="startDate">Date de début souhaitée :</label>
+                <input type="date" id="startDate" required>
+            </div></fieldset>
+            <button type="button" id="validateButton">Valider</button>
+        </form>
+
+        <div id="recap" class="hidden">
+            <h3>Récapitulatif de la demande :</h3>
+            <p id="recapDetails"></p>
+        </div>
+    </div>
+
+    <script src="formation.js"></script>
+</body>
+</html>
